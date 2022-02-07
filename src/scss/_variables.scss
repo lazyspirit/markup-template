@@ -1,0 +1,30 @@
+// Settings
+$desktop: 1025;
+$mobile: 1024;
+
+// Colors
+$color-base: #0ff;
+$color-extra: #099;
+$color-first: #000;
+$color-second: #0ff;
+$color-third: #000;
+$color-error: #e33;
+$color-disable: #999;
+
+$color-black: #111;
+$color-white: #fff;
+$color-gray: #eee;
+
+$color-link: $color-base;
+$color-link-hover: $color-extra;
+
+// Fonts
+$font-primary: 'Roboto', Tahoma, Arial, Helvetica, sans-serif;
+$font-secondary: 'Hardpixel', Georgia, 'Times New Roman', Times, serif;
+
+// Transitions
+$duration-normal: 0.4s;
+$easing-back-out: cubic-bezier(0.25, 0.74, 0.22, 1.1); // http://cubic-bezier.com/#.25,.74,.22,1.1
+$easing-back-in: cubic-bezier(0.47, -0.1, 0.5, -0.06); // http://cubic-bezier.com/#.47,-0.1,.5,-.06
+$easing-out: ease-out;
+$easing-in: ease-in;

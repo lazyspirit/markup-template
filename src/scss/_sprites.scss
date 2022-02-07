@@ -1,0 +1,68 @@
+$sprites: (
+	"icon_1": (
+		normal: (
+			x: 0,
+			y: 0,
+			width: 32,
+			height: 32,
+			image: "sprites.png",
+			total_width: 66,
+			total_height: 66,
+		),
+		retina: (
+			x: 0,
+			y: 0,
+			width: 64,
+			height: 64,
+			image: "sprites@2x.png",
+			total_width: 132,
+			total_height: 132,
+		),
+	),
+	"icon_2": (
+		normal: (
+			x: 34,
+			y: 0,
+			width: 32,
+			height: 32,
+			image: "sprites.png",
+			total_width: 66,
+			total_height: 66,
+		),
+		retina: (
+			x: 68,
+			y: 0,
+			width: 64,
+			height: 64,
+			image: "sprites@2x.png",
+			total_width: 132,
+			total_height: 132,
+		),
+	),
+	"icon_3": (
+		normal: (
+			x: 0,
+			y: 34,
+			width: 32,
+			height: 32,
+			image: "sprites.png",
+			total_width: 66,
+			total_height: 66,
+		),
+		retina: (
+			x: 0,
+			y: 68,
+			width: 64,
+			height: 64,
+			image: "sprites@2x.png",
+			total_width: 132,
+			total_height: 132,
+		),
+	),
+);
+
+@each $name in map-keys($sprites) {
+	.sprite-#{$name} {
+		@include sprite($name);
+	}
+}

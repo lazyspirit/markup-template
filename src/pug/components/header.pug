@@ -1,0 +1,20 @@
+header.header.is-lock-padding
+    .container
+
+        a.header__logo(href="/") Slacker
+        
+        nav.header__menu
+            ul.header__list
+                li: a.header__link(class={'is-active': page === 'layout'} href="layout.html") Layout
+                li: a.header__link(class="js-to-anchor" href="#anchor_1") Anchor 1
+                li: a.header__link(class="js-to-anchor" href="#form") Anchor 2
+                li
+                    a.header__link(href="#") Submenu
+                    ul.header__sub-menu
+                        li: a(href="#") Sublink 1
+                        li: a(href="#") Sublink 2
+                        li: a(href="#") Sublink 3
+
+                li: a.header__link(class="popup-link" href="#popup_login") Login
+        
+        button.header__burger(type="button"): span

@@ -1,0 +1,150 @@
+html,
+body {
+    background-color: #444;
+    font: 100%/1.6 $font-primary;
+    color: $color-white;
+}
+body.is-lock-scroll {
+    overflow: hidden;
+}
+
+a {
+    color: $color-link;
+    transition: color $duration-normal ease;
+    &:hover {
+        color: $color-link-hover;
+    }
+}
+
+img {
+    max-width: 100%;
+    vertical-align: top;
+    object-fit: cover;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    min-height: 100%;
+}
+    .container {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+.content {
+    overflow-x: hidden;
+    flex: 1 0 auto;
+    padding: 20px 0;
+}
+
+.is-animate {
+    transform: translate(0, 120%);
+    opacity: 0;
+    transition: all $duration-normal ease $duration-normal;
+    &.is-active {
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+}
+
+
+.icon-svg {
+    width: 32px; height: 32px;
+    fill: $color-base;
+    transition: all $duration-normal ease;
+    &:hover {
+        fill: $color-black;
+    }
+}
+
+
+.loader {
+    position: absolute;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 50%;
+    left: 50%;
+    width: 200px;
+    height: 200px;
+    margin: -100px 0 0 -100px;
+    background-color: $color-white;
+    border-radius: 50%;
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 50%;
+        height: 100%;
+        background-color: $color-white;
+        animation: loader_bg 5s steps(1, end) forwards;
+        z-index: 2;
+    }
+    &__line {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        animation: loader_line 10s linear forwards;
+        &:after {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0; left: 0;
+            width: 50%;
+            height: 100%;
+            background-color: $color-base;
+            z-index: 1;
+        }
+    }
+    &__body {
+        overflow: hidden;
+        width: 100px;
+        height: 100px;
+        background-color: #444;
+        border-radius: 50%;
+        text-align: center;
+        z-index: 3;
+    }
+    &__counter {
+        animation: loader_counter 10s steps(9, end) forwards;
+        li {
+            height: 100px;
+            font: 40px/100px $font-secondary;
+        }
+    }
+}
+
+@keyframes loader_bg {
+    0% {
+
+    }
+    100% {
+        left: 50%;
+        background-color: $color-base;
+    }
+}
+
+@keyframes loader_counter {
+    0% {
+
+    }
+    100% {
+        transform: translate(0, -900px);
+    }
+}
+
+@keyframes loader_line {
+    0% {
+
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

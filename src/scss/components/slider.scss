@@ -1,0 +1,21 @@
+.image-slider {
+    position: relative;
+    &__wrapper {}
+    &__slide {}
+    &__image {
+        text-align: center;
+        img {}
+    }
+    &__prev:after,
+    &__next:after {
+        color: $color-base;
+    }
+    .swiper-pagination-bullet {
+        width: 20px;
+        height: 20px;
+        background-color: $color-base;
+        font-size: 14px;
+        line-height: 20px;
+    }
+    &__scrollbar {}
+}
